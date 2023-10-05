@@ -88,9 +88,23 @@ class Node{
 	   a method to find the node in the tree
 	   with a specific value
 	   */
-	   public boolean find(Node root, int key){
-		 //implement in here
-		  
+	   public boolean find(Node root, int key) {
+		   
+		   //get root
+		   Node current = root
+				   
+	       //while key has not been found, traverse through BST
+		   while (current != null) {
+			   if (current.value == key)
+				   return true;
+			   else if (key > current.value)
+				   current = current.right;
+			   else if (key < current.value)
+				   current = current.left;		   
+		   }
+		   
+		   //if key has not been found, return false
+		   return false;
 	   }
 	   
 	   
