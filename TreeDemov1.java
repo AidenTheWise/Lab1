@@ -100,8 +100,18 @@ class Node{
 	   with a smallest key
 	   */
 	   public int getMin(Node root){
-         //implement in here
+		   
+		   //get root
+		   Node current = root;
+		   
+		   //if current node has a child to the left, move to that node
+		   while(current.left != null) {
+			   
+			   current = current.left;
+		   }
 	      
+		   //return the value of the smallest node
+		   return current.value;
 	   }
 	  
 	  
