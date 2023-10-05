@@ -54,9 +54,10 @@ class Node{
 	   }
 	   
 	   /*
-	   pre-order traversal
-	   Prints the value of every node preorder
-	   */
+	    * pre-order traversal
+	    * Prints the value of every node preOrder
+	    * @param root The root of a BST
+	    */
 	   public void preOrderTraversal(Node root){
 		   
 		   //base case
@@ -72,12 +73,12 @@ class Node{
 		   //go right recursively
 		   preOrderTraversal(root.right);
 	   }
-
-	   
 	   
 	   /*
-	   in-order traversal
-	   */
+	    * in-order traversal
+	    * Prints the value of every node inOrder
+	    * @param root The root of a BST
+	    */
 	   public void inOrderTraversal(Node root){
 		   
 		   //base case
@@ -94,12 +95,11 @@ class Node{
 		   preOrderTraversal(root.right);
 	   }
 	   
-	   
-	   
 	   /*
-	   post-order traversal
-	   */
-	  
+	    * post-order traversal
+	    * Prints the values of every node postOrder
+	    * @param root The root of a BST
+	    */
 	   public void postOrderTraversal(Node root){
 		   
 		   //base case
@@ -116,12 +116,13 @@ class Node{
 		   System.out.print(root.value + ", ");
 	   }
 	   
-	   
-	   
 	   /*
-	   a method to find the node in the tree
-	   with a specific value
-	   */
+	    * a method to find the node in the tree
+	    * with a specific value
+	    * @param root The root of a BST
+	    * @param key An integer that is to be found
+	    * @return a boolean whether the key was found or not
+	    */
 	   public boolean find(Node root, int key) {
 		   
 		   //get root
@@ -141,12 +142,12 @@ class Node{
 		   return false;
 	   }
 	   
-	   
-	   
 	   /*
-	   a method to find the node in the tree
-	   with a smallest key
-	   */
+	    * a method to find the node in the tree
+	    * with a smallest key
+	    * @param root The root of a BST
+	    * @return int the value of the smallest node
+	    */
 	   public int getMin(Node root){
 		   
 		   //get root
@@ -164,9 +165,11 @@ class Node{
 	  
 	  
 	   /*
-	   a method to find the node in the tree
-	   with a largest key
-	   */
+	    * a method to find the node in the tree
+	    * with a largest key
+	    * @param root The root of a BST
+	    * @return int the value of the greatest node
+	    */
 	   public int getMax(Node root){
 		   
 		   //get root
