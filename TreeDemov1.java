@@ -106,7 +106,6 @@ class Node{
 		   
 		   //if current node has a child to the left, move to that node
 		   while(current.left != null) {
-			   
 			   current = current.left;
 		   }
 	      
@@ -121,7 +120,17 @@ class Node{
 	   with a largest key
 	   */
 	   public int getMax(Node root){
-         //implement in here
+		   
+		   //get root
+		   Node current = root;
+		   
+		   //if current node has a child to the right, move to that node
+		   while(current.right != null) {
+			   current = current.right;
+		   }
+	      
+		   //return the value of the greatest node
+		   return current.value;
 	   }
 	   
 	   
