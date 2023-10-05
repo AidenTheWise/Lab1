@@ -79,6 +79,7 @@ class Node{
 	   in-order traversal
 	   */
 	   public void inOrderTraversal(Node root){
+		   
 		   //base case
 		   if(root == null)
 			   return;
@@ -100,8 +101,19 @@ class Node{
 	   */
 	  
 	   public void postOrderTraversal(Node root){
-         //implement in here
 		   
+		   //base case
+		   if(root == null)
+			   return;
+		   
+		   //go left recursively
+		   preOrderTraversal(root.left);
+		   
+		   //go right recursively
+		   preOrderTraversal(root.right);
+		   
+		   //print the current node value
+		   System.out.print(root.value + ", ");
 	   }
 	   
 	   
